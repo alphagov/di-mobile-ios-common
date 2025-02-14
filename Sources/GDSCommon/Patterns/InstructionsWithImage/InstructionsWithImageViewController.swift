@@ -52,6 +52,10 @@ public final class InstructionsWithImageViewController: BaseViewController, Titl
     /// Image view: ``UIImageView``
     @IBOutlet private var imageView: UIImageView! {
         didSet {
+            if let viewModel = viewModel as? InstructionsWithImageWithAltTextViewModel {
+                imageView.accessibilityLabel = viewModel.imageAltText.value
+            }
+
             imageView.image = viewModel.image
             imageView.accessibilityIdentifier = "imageView"
         }

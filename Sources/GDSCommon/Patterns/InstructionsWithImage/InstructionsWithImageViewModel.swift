@@ -15,3 +15,7 @@ public protocol InstructionsWithImageViewModel {
     var primaryButtonViewModel: ButtonViewModel { get }
     var secondaryButtonViewModel: ButtonViewModel? { get }
 }
+
+public protocol InstructionsWithImageWithAltTextViewModel {
+    var imageAltText: GDSLocalisedString { get }
+}
